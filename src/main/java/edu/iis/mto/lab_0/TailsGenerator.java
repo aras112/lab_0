@@ -7,11 +7,10 @@ public class TailsGenerator {
 
     private ArrayList<String> strings;
 
-    public TailsGenerator() {
-        strings = new ArrayList<>();
-    }
 
     public List<String> tails(String value) {
+
+        strings = new ArrayList<>();
 
         if (value == null) {
             return new ArrayList<>();
