@@ -5,8 +5,24 @@ import java.util.List;
 
 public class TailsGenerator {
 
-    public List<String> tails(String value) {
-        return new ArrayList<>(value.length());
+    private ArrayList<String> strings;
+
+    public TailsGenerator() {
+        strings = new ArrayList<>();
     }
 
+    public List<String> tails(String value) {
+
+        if (value == null) {
+            return new ArrayList<>();
+        }
+
+        for (Integer i = 0; i < value.length(); i++) {
+            strings.add(value.substring(i));
+        }
+
+        strings.add("");
+
+        return strings;
+    }
 }
